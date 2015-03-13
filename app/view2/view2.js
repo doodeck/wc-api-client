@@ -9,6 +9,15 @@ angular.module('myApp.view2', ['ngRoute'])
   });
 }])
 
-.controller('View2Ctrl', [function() {
+.controller('View2Ctrl', ['$scope', 'WCSettings', 'remoteAPI',
+                  function($scope,   WCSettings,   remoteAPI) {
+  $scope.hostname = WCSettings.getHost(); // "http://localhost";
 
+  $scope.$watch('hostname', function(newVal, oldVal, scope) {
+    console.log('Watching happily: ', newVal, oldVal, scope);
+    if (newVal !== oldVal) {
+      WCSettings.setHost(newVal);
+    }
+    remoteAPI.setHost(newVal); // that service has no defaulr, so neds initialization
+  });
 }]);

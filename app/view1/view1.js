@@ -9,6 +9,15 @@ angular.module('myApp.view1', ['ngRoute'])
   });
 }])
 
-.controller('View1Ctrl', [function() {
-
+.controller('View1Ctrl', ['$scope', 'remoteAPI',
+                  function($scope,   remoteAPI) {
+  $scope.executeQuery = function() {
+    remoteAPI.getWSDL()
+      .success(function(data, status, headers, config) {
+        console.log('success: ', data, status, headers, config);
+      })
+      .error(function(data, status, headers, config) {
+        console.log('error: ', data, status, headers, config);
+      });
+  }
 }]);

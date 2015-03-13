@@ -1,4 +1,14 @@
-<p>This is the partial for view 2.</p>
+<p>This is the partial for Settings</p>
+
+<div class="form-group">
+  <div class="col-md-6">
+    <label>Service host:</label>
+  </div>
+  <div class="col-md-6">
+    <input type="text" ng-model="hostname" class="form-control">
+  </div>
+</div>
+
 <p>
   Showing of 'interpolate' filter:
   {{ 'Current version is v%VERSION%.' | interpolate }}
