@@ -18,6 +18,5 @@ angular.module('myApp.view2', ['ngRoute'])
     if (newVal !== oldVal) {
       WCSettings.setHost(newVal);
     }
-    remoteAPI.setHost(newVal); // that service has no defaulr, so neds initialization
   });
 }]);

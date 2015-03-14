@@ -4,13 +4,11 @@
 'use strict';
 
 angular.module('myApp.remoteapi', [])
-.factory('remoteAPI', ['$http', function($http) {
-  var hostname = undefined;
+.factory('remoteAPI', ['$http', 'WCSettings', function($http, WCSettings) {
+  // var hostname = undefined;
   return {
-    setHost: function(host) {
-      hostname = host;
-    },
     getWSDL: function() {
+      var hostname = WCSettings.getHost();
       return $http({method: 'JSONP', url: hostname + '/wc-api/v2?_jsonp=JSON_CALLBACK'});
     }
   }
