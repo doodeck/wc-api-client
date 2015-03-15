@@ -10,11 +10,16 @@ angular.module('myApp.remoteapi', [])
   return {
     getWSDL: function() {
       var hostname = WCSettings.getHost();
-      return $http({method: 'JSONP', url: MyConfig.protocol + hostname + '/wc-api/v2?_jsonp=JSON_CALLBACK'});
+      return $http({method: 'JSONP', url: MyConfig.protocol + '://' + hostname + '/wc-api/v2?_jsonp=JSON_CALLBACK'});
+    },
+    getProducts: function() {
+      
     }
   }
 }])
-.config(function($httpProvider) { // nice: http://stackoverflow.com/questions/25400891/how-to-custom-set-angularjs-jsonp-callback-name
+// The rest is workaround for JSONP:
+// http://stackoverflow.com/questions/25400891/how-to-custom-set-angularjs-jsonp-callback-name
+.config(function($httpProvider) {
   $httpProvider.interceptors.push('jsonpInterceptor');
 })
 .factory('jsonpInterceptor', function($timeout, $window) {
