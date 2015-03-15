@@ -11,7 +11,7 @@ angular.module('myApp.view1', ['ngRoute'])
 
 .controller('View1Ctrl', ['$scope', 'remoteAPI',
                   function($scope,   remoteAPI) {
-  $scope.executeQuery = function() {
+  $scope.getWSDL = function() {
     remoteAPI.getWSDL()
       .success(function(data, status, headers, config) {
         console.log('success: ', data, status, headers, config);
@@ -19,5 +19,16 @@ angular.module('myApp.view1', ['ngRoute'])
       .error(function(data, status, headers, config) {
         console.log('error: ', data, status, headers, config);
       });
+  };
+
+  $scope.getProducts = function() {
+    remoteAPI.getProducts()
+      .success(function(data, status, headers, config) {
+        console.log('products success: ', data, status, headers, config);
+      })
+      .error(function(data, status, headers, config) {
+        console.log('products error: ', data, status, headers, config);
+      });
   }
+
 }]);

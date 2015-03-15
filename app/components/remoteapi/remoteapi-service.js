@@ -3,17 +3,43 @@
 
 'use strict';
 
-angular.module('myApp.remoteapi', [])
-.factory('remoteAPI', ['$http', 'WCSettings', 'MyConfig',
-               function($http,   WCSettings,   MyConfig) {
+angular.module('myApp.remoteapi.service', [])
+.factory('remoteAPI', ['$http', 'WCSettings', 'MyConfig', 'useJSONP',
+               function($http,   WCSettings,   MyConfig,   useJSONP) {
   // var hostname = undefined;
+  var _procureURL = function(route, authenticate) {
+    var hostname = WCSettings.getHost();
+    var params = [];
+    if (useJSONP) {
+      params.push('_jsonp=JSON_CALLBACK');
+    }
+    if (authenticate) { // currently it only works for https protocol
+      var consumer = WCSettings.getConsumer();
+
+      params.push('consumer_key=' + consumer.key);
+      params.push('consumer_secret=' + consumer.secret);
+    }
+    var paramsStr = '';
+    var separator = '?';
+    for (var par in params) {
+      paramsStr += separator + params[par];
+      separator = '&';
+    }
+    return MyConfig.protocol + '://' + hostname + '/wc-api/v2' + route + paramsStr;
+  };
+
   return {
     getWSDL: function() {
-      var hostname = WCSettings.getHost();
-      return $http({method: 'JSONP', url: MyConfig.protocol + '://' + hostname + '/wc-api/v2?_jsonp=JSON_CALLBACK'});
+      return $http({
+        method: useJSONP ? 'JSONP' : 'GET',
+        url: _procureURL('/', false)
+      });
     },
     getProducts: function() {
-      
+      return $http({
+        method: useJSONP ? 'JSONP' : 'GET',
+        url: _procureURL('/products', true)
+      });      
     }
   }
 }])
