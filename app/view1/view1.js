@@ -15,9 +15,11 @@ angular.module('myApp.view1', ['ngRoute'])
     remoteAPI.getWSDL()
       .success(function(data, status, headers, config) {
         console.log('success: ', data, status, headers, config);
+        $scope.responseJSON = data.store;
       })
       .error(function(data, status, headers, config) {
         console.log('error: ', data, status, headers, config);
+        $scope.responseJSON = '';
       });
   };
 
@@ -25,9 +27,11 @@ angular.module('myApp.view1', ['ngRoute'])
     remoteAPI.getProducts()
       .success(function(data, status, headers, config) {
         console.log('products success: ', data, status, headers, config);
+        $scope.responseJSON = data.products;
       })
       .error(function(data, status, headers, config) {
         console.log('products error: ', data, status, headers, config);
+        $scope.responseJSON = '';
       });
   }
 

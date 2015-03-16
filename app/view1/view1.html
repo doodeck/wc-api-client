@@ -1,5 +1,11 @@
 <p>This is the partial for API Explorer</p>
 <div class="form-group">
-  <button type="button" class="btn btn-info" ng-click="getWSDL()">Execute</button>
-  <button type="button" class="btn btn-warning" ng-click="getProducts()">Products</button>
+  <div>
+    <button type="button" class="btn btn-info" ng-click="getWSDL()">Execute</button>
+    <button type="button" class="btn btn-warning" ng-click="getProducts()">Products</button>
+  </div>
+  <div>
+  Response: 
+  <pre>{{responseJSON | json}}</pre>
+  </div>
 </div>
