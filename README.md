@@ -1,5 +1,10 @@
 # angular-seed — the seed for AngularJS apps
 
+## Clone not Fork
+
+Cloned from https://github.com/angular/angular-seed
+
+Why it's not forked? There can be only one fork of any foreign github repo per user. I long used up that limit, after all cloning the seed application is the first thing you'd do when you start a new project.
 
 ## Getting Started
 
