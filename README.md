@@ -70,6 +70,13 @@ npm start
 
 Now browse to the app at `http://localhost:8000/app/index.html`.
 
+## Enable WooCommerce plugin API
+
+Login to Wordpress as the user with administrative proviledges. Go to Plugins->Installed Plugins. In the WooCommerce plugin click Settings. In the General section find the entry API and check the box next to "Enable the REST API".
+
+Then select the user which you will use for API access. GO to Users->All Users.
+
+Depending on the user's role (Administrator/Shop Manager/Customer) the API will be capable to access different kind of information, depending on the access rights. Edit the chosen user. Scroll all the way down to "WooCommerce API Keys" section. Check the box "Generate API Key", then click "Update User". You will see "Consumer Key:" and "Consumer Secret:" fields, this is what you must copy in the corresponding "Consumer key/secret:" fields of the wc-api-application.
 
 
 ## Serving the Application Files
