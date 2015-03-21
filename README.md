@@ -4,7 +4,7 @@
 
 Cloned from https://github.com/angular/angular-seed
 
-Why it's not forked? There can be only one fork of any foreign github repo per user. I long used up that limit, after all cloning the seed application is the first thing you'd do when you start a new project.
+Why is it not forked? There can be only one fork of any foreign github repo per user. I have already used up that limit, after all cloning the seed application is the first thing you'd do when you are starting a new project.
 
 ## Getting Started
 
@@ -102,7 +102,7 @@ Then you can start your own development web server to serve static files from a 
 running:
 
 ```
-http-server -a localhost -p 8000
+http-server -a 0.0.0.0 -p 8000 -c-1
 ```
 
 Alternatively, you can choose to configure your own webserver, such as apache or nginx. Just
