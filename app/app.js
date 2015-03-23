@@ -5,6 +5,8 @@ angular.module('myApp', [
   'ngRoute',
   'myApp.view1',
   'myApp.view2',
+  'myApp.view3.controller',
+  'myApp.view3.directive',
   'myApp.version',
   'myApp.settings',
   'myApp.remoteapi',
