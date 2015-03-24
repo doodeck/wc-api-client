@@ -2,7 +2,7 @@
 
 angular.module('myApp.remoteapi', [
   'myApp.remoteapi.service'
-  // 'myApp.version.version-directive'
+  // 'myApp.version.version-directives'
 ])
 
 .value('useJSONP', true);

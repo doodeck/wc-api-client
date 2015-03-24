@@ -6,7 +6,7 @@ angular.module('myApp', [
   'myApp.view1',
   'myApp.view2',
   'myApp.view3.controller',
-  'myApp.view3.directive',
+  'myApp.view3.directives',
   'myApp.version',
   'myApp.settings',
   'myApp.remoteapi',
