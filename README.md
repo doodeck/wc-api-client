@@ -108,6 +108,11 @@ http-server -a 0.0.0.0 -p 8000 -c-1
 Alternatively, you can choose to configure your own webserver, such as apache or nginx. Just
 configure your server to serve the files under the `app/` directory.
 
+## Experimetal stuff
+There is an "invisible" route at
+http://localhost:8000/app/#/view3
+not connected to the main navigation and not directly related to the main workflow. This serves some future development.
+
 
 
 ## Contact
