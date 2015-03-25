@@ -34,5 +34,10 @@ angular.module('myApp.view3.controller', ['ngRoute'])
 
   $scope.areaChange = function(index) {
     console.log('Area happily changed: ', index);
+  };
+
+  $scope.enterPressed = function(index) {
+    console.log('Enter happily enterPressed: ', index);
   }
+
 }]);
