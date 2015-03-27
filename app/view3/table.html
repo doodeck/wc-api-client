@@ -1,8 +1,8 @@
 <h1> this is partial for table </h1>
-
+{{tableContent | json}}
 <div>
   <table>
-    <tr ng-repeat="trow in tableContent">
+    <tr ng-repeat="trow in tableType">
       <td>
         <a href="{{trow.url}}">{{trow.name}}</a>
       </td>

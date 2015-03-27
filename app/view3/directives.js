@@ -4,6 +4,11 @@ angular.module('myApp.view3.directives', [])
 .directive('tableDirective', function() {
   return {
     // require: 'ngModel',
+    restrict: 'E',
+    scope: {
+      tableType: '=type',
+      tableContent: '=table'
+    },
     templateUrl: 'view3/table.html'
   };
 })
