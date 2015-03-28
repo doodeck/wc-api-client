@@ -7,7 +7,9 @@ angular.module('myApp.view3.directives', [])
     restrict: 'E',
     scope: {
       tableType: '=type',
-      tableContent: '=table'
+      tableContent: '=table',
+      // enterPressed: '&enterpressed',
+      functions: '=functions'
     },
     templateUrl: 'view3/table.html'
   };

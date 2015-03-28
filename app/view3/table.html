@@ -7,7 +7,7 @@
         <a href="{{trow.url}}">{{trow.name}}</a>
       </td>
       <td>
-        <input type="number" step="any" ng-value="trow.price * trow.count" ng-model="trow.model" ng-change="areaChange($index)" ng-enter="enterPressed($index)" />
+        <input type="number" step="any" ng-value="trow.price * trow.count" ng-model="trow.model" ng-change="functions.areaChange($index)" ng-enter="functions.enterPressed($index)" />
       </td>
     </tr>
   </table>

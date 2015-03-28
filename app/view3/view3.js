@@ -62,4 +62,15 @@ angular.module('myApp.view3.controller', ['ngRoute'])
     console.log('Enter happily enterPressed: ', index);
   }
 
+  $scope.functions = {
+    areaChange: function(index) {
+      console.log('functions areaChange');
+      return $scope.areaChange(index);
+    },
+    enterPressed: function(index) {
+      console.log('functions enterPressed');
+      return $scope.enterPressed(index);
+    }
+  }
+
 }]);
