@@ -64,11 +64,11 @@ angular.module('myApp.view3.controller', ['ngRoute'])
 
   $scope.functions = {
     areaChange: function(index) {
-      console.log('functions areaChange');
+      // console.log('functions areaChange');
       return $scope.areaChange(index);
     },
     enterPressed: function(index) {
-      console.log('functions enterPressed');
+      // console.log('functions enterPressed');
       return $scope.enterPressed(index);
     }
   }
