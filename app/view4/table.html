@@ -1,0 +1,17 @@
+<h1> this is partial for table </h1>
+{{tableContent | json}}
+<div>
+  <table>
+    <tr ng-repeat="trow in tableType">
+      <td>
+        <a href="{{trow.url}}">{{trow.name}}</a>
+      </td>
+      <td> <!-- count -->
+        <input min="0" type="number" value="0" width="20" ng-model="trow.count" ng-change="functions.sumTotalChanged()" />
+      </td>
+      <td>
+        <input type="number" step="any" ng-value="trow.price * trow.count" ng-model="trow.model" ng-change="functions.areaChange($index)" ng-enter="functions.enterPressed($index)" />
+      </td>
+    </tr>
+  </table>
+</div>
