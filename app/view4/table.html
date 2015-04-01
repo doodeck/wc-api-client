@@ -1,16 +1,20 @@
-<h1> this is partial for table </h1>
+<h1> this is partial for table4 </h1>
 {{tableContent | json}}
 <div>
   <table>
-    <tr ng-repeat="trow in tableType">
+    <tr ng-repeat="trow in tableContent.main">
       <td>
         <a href="{{trow.url}}">{{trow.name}}</a>
       </td>
       <td> <!-- count -->
-        <input min="0" type="number" value="0" width="20" ng-model="trow.count" ng-change="functions.sumTotalChanged()" />
+        <input min="0" type="number" value="0" width="20" ng-model="trow.count" ng-change="countChanged($index, trow)" />
       </td>
       <td>
-        <input type="number" step="any" ng-value="trow.price * trow.count" ng-model="trow.model" ng-change="functions.areaChange($index)" ng-enter="functions.enterPressed($index)" />
+        <input type="number" step="any" ng-model="trow.area" ng-change="areaChanged($index, trow)" /> <!--ng-value="trow.price * trow.count | number:2"  ng-enter="enterPressed($index)"  -->
+      </td>
+      <td>
+        <input type="text" ng-value="trow.count * trow.price"
+               ng-model="trow.model" ng-enter="enterPressed($index, trow)" />
       </td>
     </tr>
   </table>

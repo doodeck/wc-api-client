@@ -1,9 +1,19 @@
-<p>This is the partial for ngMode experiments</p>
+<p>This is the partial for ngMode experiments global</p>
 
 <div>
-  <table-directive type="tableContent.main" table="tableContent" functions="functions" />
+  <table-global-directive />
 </div>
 
-<div>
-  <table-directive type="tableContent.misc" table="tableContent" functions="functions" />
-</div>
+<form>
+  <div>
+    <select ng-model="tableContent.form.correctlySelected"
+            ng-options="opt as opt.label for opt in options">
+    </select>
+  </div>
+
+  <div>
+    <input type="radio" ng-model="tableContent.form.name" value="red">  Red <br/>
+    <input type="radio" ng-model="tableContent.form.name" value="green"> Green <br/>
+    <input type="radio" ng-model="tableContent.form.name" value="blue"> Blue <br/>
+  </div>
+</form>

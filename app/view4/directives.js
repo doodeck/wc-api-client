@@ -1,17 +1,11 @@
 // directive.js
 
-angular.module('myApp.view3.directives', [])
-.directive('tableDirective', function() {
+angular.module('myApp.view4.directives', [])
+.directive('tableGlobalDirective', function() {
   return {
     // require: 'ngModel',
     restrict: 'E',
-    scope: {
-      tableType: '=type',
-      tableContent: '=table',
-      // enterPressed: '&enterpressed',
-      functions: '=functions'
-    },
-    templateUrl: 'view3/table.html'
+    templateUrl: 'view4/table.html'
   };
 })
 .directive('ngEnter', function() {
