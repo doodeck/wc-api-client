@@ -2,7 +2,7 @@
   "name": "wc-api-client",
   "description": "A starter project for AngularJS",
   "version": "0.0.1",
-  "homepage": "https://github.com/angular/angular-seed",
+  "homepage": "https://github.com/doodeck/wc-api-client",
   "license": "MIT",
   "private": true,
   "dependencies": {
