@@ -2,7 +2,7 @@
   "name": "wc-api-client",
   "private": true,
   "version": "0.0.1",
-  "description": "A starter project for AngularJS",
+  "description": "A test UI for Wordpress/WooCommerce REST API",
   "repository": "https://github.com/doodeck/wc-api-client",
   "license": "MIT",
   "devDependencies": {
