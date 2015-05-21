@@ -109,11 +109,10 @@ Alternatively, you can choose to configure your own webserver, such as apache or
 configure your server to serve the files under the `app/` directory.
 
 ## Experimental stuff
-There are two routes at
+There are two routes hidden from the navigation at
 http://localhost:8000/app/#/view3 and http://localhost:8000/app/#/view4
 which are purely experimental and not quite related to the main app. They will hopefully encourage some future development.
 
 
 
 ## Contact
-
