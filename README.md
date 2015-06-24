@@ -114,5 +114,3 @@ http://localhost:8000/app/#/view3 and http://localhost:8000/app/#/view4
 which are purely experimental and not quite related to the main app. They will hopefully encourage some future development.
 
 
-
-## Contact
