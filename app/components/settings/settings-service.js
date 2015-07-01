@@ -12,10 +12,12 @@ angular.module('myApp.settings', ['ngCookies'])
 
   // cookie functions should facilitate migration to ng 1.4
   var _setCookie = function(cookie, value) {
-    $cookies[cookie] = value;
+    // ng till 1.3 $cookies[cookie] = value;
+    $cookies.put(cookie, value);
   }
   var _getCookie = function(cookie) {
-    return $cookies[cookie];
+    // ng till 1.3 return $cookies[cookie];
+    return $cookies.get(cookie);
   }
 
   return {
