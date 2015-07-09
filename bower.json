@@ -1,7 +1,7 @@
 {
   "name": "wc-api-client",
   "description": "A test UI for Wordpress/WooCommerce REST API",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/doodeck/wc-api-client",
   "license": "MIT",
   "private": true,
